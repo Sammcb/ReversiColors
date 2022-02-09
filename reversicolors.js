@@ -1,5 +1,5 @@
 let timeoutId = null
-var themeSymbol = ""
+let themeSymbol = ""
 
 function loadBoard() {
 	const board = document.getElementById('board')
