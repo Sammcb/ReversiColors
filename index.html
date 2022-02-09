@@ -1,0 +1,29 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./reversicolors.css">
+<script src="./reversicolors.js"></script>
+<title>ReversiColors</title>
+<body onresize="resizeBoard()" onload="loadBoard()">
+	<div class="center-column">
+		<h1 class="title">ReversiColors</h1>
+	</div>
+	<div id="inputs">
+		<div class="input-group">
+			<p>Pieces</p>
+			<input id="pieceLight" type="color" value="#ffffff" required oninput="theme()">
+			<p id="pieceLightColor"></p>
+			<input id="pieceDark" type="color" value="#000000" required oninput="theme()">
+			<p id="pieceDarkColor"></p>
+		</div>
+		<div class="input-group">
+			<p>Square</p>
+			<input id="square" type="color" value="#20a860" required oninput="theme()">
+			<p id="squareColor"></p>
+			<p>Border</p>
+			<input id="border" type="color" value="#44dc8a" required oninput="theme()">
+			<p id="borderColor"></p>
+		</div>
+	</div>
+	<div id="board-container">
+		<div id="board"></div>
+	</div>
+</body>
