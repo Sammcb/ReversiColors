@@ -15,10 +15,10 @@ function loadBoard() {
 	}
 
 	if (pieceLight && pieceDark && square && border) {
-		document.getElementById('pieceLight').value = pieceLight
-		document.getElementById('pieceDark').value = pieceDark
-		document.getElementById('square').value = square
-		document.getElementById('border').value = border
+		document.getElementById('pieceLight').value = `#${pieceLight}`
+		document.getElementById('pieceDark').value = `#${pieceDark}`
+		document.getElementById('square').value = `#${square}`
+		document.getElementById('border').value = `#${border}`
 	}
 
 	let html = ''
@@ -62,10 +62,10 @@ function resizeBoard() {
 }
 
 function updateURL() {
-	const pieceLight = document.getElementById('pieceLight').value
-	const pieceDark = document.getElementById('pieceDark').value
-	const square = document.getElementById('square').value
-	const border = document.getElementById('border').value
+	const pieceLight = document.getElementById('pieceLight').value.slice(1)
+	const pieceDark = document.getElementById('pieceDark').value.slice(1)
+	const square = document.getElementById('square').value.slice(1)
+	const border = document.getElementById('border').value.slice(1)
 	const url = new URL(window.location.origin + window.location.pathname)
 	url.searchParams.append('symbol', themeSymbol)
 	url.searchParams.append('pieceLight', pieceLight)
