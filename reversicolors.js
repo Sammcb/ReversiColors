@@ -24,17 +24,17 @@ function loadBoard() {
 	let html = ''
 
 	for (let row = 7; row >= 0; row--) {
-		html += `<div class="row">`
+		html += '<div class="row">'
 		for (let column = 0; column < 8; column++) {
-			html += `<div class="square">`
+			html += '<div class="square">'
 			if ((row === 3 && column === 3) || (row === 4 && column === 4)) {
-				html += `<span class="piece dark-piece"></span>`
+				html += '<span class="piece dark-piece"></span>'
 			} else if ((row === 3 && column === 4) || (row === 4 && column === 3)) {
-				html += `<span class="piece light-piece"></span>`
+				html += '<span class="piece light-piece"></span>'
 			}
-			html += `</div>`
+			html += '</div>'
 		}
-		html += `</div>`
+		html += '</div>'
 	}
 
 	board.innerHTML = html
